@@ -15,10 +15,11 @@ fetch ('http://andmebaas.stat.ee/sdmx-json/data/PA633/36+59+64+65+DBL248.3.1/all
 .then(data => {
     data.structure.dimensions.observation[0].values.forEach((el, i) => {
         const occupations = (el.name.split(' ')[0])
-        const dataSetKey = i + '0:0:0:0'
-        console.log(el)
-        console.log(i)
-    
+        const dataSetKey = i + '0:0:0:'
+        console.log(el.name.split(' '[0]))
+        console.log(dataSetKey)
+        console.log(data.dataSets[0].observation[dataSetKey][0])
+        occupations[occupationsKey].rate = dataSets[0].observation
     })
 
 })
